@@ -226,7 +226,11 @@ int DiskIO::DiskSync(void) {
    } // if
 
    if (isOpen) {
+<<<<<<< HEAD
       fsync(fd);
+=======
+      sync();
+>>>>>>> f1f453c08f508efedda2195a88028f982a1580df
 #if defined(__APPLE__) || defined(__sun__)
       cout << "Warning: The kernel may continue to use old or deleted partitions.\n"
            << "You should reboot or remove the drive.\n";
