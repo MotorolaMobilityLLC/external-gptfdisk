@@ -404,8 +404,8 @@ int GPTDataCL::DoOptions(int argc, char* argv[]) {
                   break;
                case 'Z':
                   if (!pretend) {
-                     DestroyMBR();
                      DestroyGPT();
+                     DestroyMBR();
                   } // if
                   saveNonGPT = 0;
                   saveData = 0;
@@ -446,8 +446,8 @@ int GPTDataCL::DoOptions(int argc, char* argv[]) {
                   break;
                case 'Z':
                   if (!pretend) {
-                     DestroyMBR();
                      DestroyGPT();
+                     DestroyMBR();
                   } // if
                   saveNonGPT = 0;
                   saveData = 0;
