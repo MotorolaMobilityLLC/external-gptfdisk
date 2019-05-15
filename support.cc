@@ -18,6 +18,8 @@
 #include <string.h>
 #include <sys/stat.h>
 #include <string>
+#include <cctype>
+#include <algorithm>
 #include <iostream>
 #include <inttypes.h>
 #include <sstream>
@@ -361,3 +363,11 @@ void WinWarning(void) {
       exit(0);
    #endif
 } // WinWarning()
+
+// Returns the input string in lower case
+string ToLower(const string& input) {
+   string lower = input; // allocate correct size through copy
+
+   transform(input.begin(), input.end(), lower.begin(), ::tolower);
+   return lower;
+} // ToLower()
