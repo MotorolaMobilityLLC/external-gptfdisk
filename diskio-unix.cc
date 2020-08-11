@@ -426,7 +426,7 @@ int DiskIO::Write(void* buffer, int numBytes) {
 // return correct values for disk image files.
 uint64_t DiskIO::DiskSize(int *err) {
    uint64_t sectors = 0; // size in sectors
-   off_t bytes = 0; // size in bytes
+   off64_t bytes = 0; // size in bytes
    struct stat64 st;
    int platformFound = 0;
 #ifdef __sun__
