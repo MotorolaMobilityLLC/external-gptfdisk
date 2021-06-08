@@ -244,7 +244,6 @@ void GPTPart::SetName(const string & theName) {
       // then to utf16le
       if ( uni < 0x10000 ) {
          name[ pos ] = (uint16_t) uni ;
-         if ( ! IsLittleEndian() ) ReverseBytes( name + pos , 2 ) ;
          pos ++ ;
       } // if
       else {
@@ -254,10 +253,8 @@ void GPTPart::SetName(const string & theName) {
          } // if
          uni -= 0x10000 ;
          name[ pos ] = (uint16_t)( uni >> 10 ) | 0xd800 ;
-         if ( ! IsLittleEndian() ) ReverseBytes( name + pos , 2 ) ;
          pos ++ ;
          name[ pos ] = (uint16_t)( uni & 0x3ff ) | 0xdc00 ;
-         if ( ! IsLittleEndian() ) ReverseBytes( name + pos , 2 ) ;
          pos ++ ;
       }
    } // for
