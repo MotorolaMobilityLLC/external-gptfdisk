@@ -154,7 +154,7 @@ int GPTDataCL::DoOptions(int argc, char* argv[]) {
    } // while
 
    // Assume first non-option argument is the device filename....
-   device = (char*) poptGetArg(poptCon);
+   device = strdup((char*) poptGetArg(poptCon));
    poptResetContext(poptCon);
 
    if (device != NULL) {
