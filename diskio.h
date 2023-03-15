@@ -65,6 +65,9 @@ class DiskIO {
       ~DiskIO(void);
 
       void MakeRealName(void);
+#ifdef ENABLE_HEAP_DISKIO
+      int OpenForRead(const unsigned char* data, size_t size);
+#endif
       int OpenForRead(const std::string & filename);
       int OpenForRead(void);
       int OpenForWrite(const std::string & filename);

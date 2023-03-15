@@ -7,7 +7,6 @@
   under the terms of the GNU GPL version 2, as detailed in the COPYING file. */
 
 #define __STDC_LIMIT_MACROS
-#ifndef __STDC_CONSTANT_MACROS
 #define __STDC_CONSTANT_MACROS
 #define __STDC_FORMAT_MACROS
 
@@ -22,7 +21,6 @@
 #include <cctype>
 #include <algorithm>
 #include <iostream>
-#include <inttypes.h>
 #include <sstream>
 #include "support.h"
 

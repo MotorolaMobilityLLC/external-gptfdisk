@@ -12,9 +12,7 @@
 //
 
 #define __STDC_LIMIT_MACROS
-#ifndef __STDC_CONSTANT_MACROS
 #define __STDC_CONSTANT_MACROS
-#endif
 
 #include <stdio.h>
 #include <time.h>

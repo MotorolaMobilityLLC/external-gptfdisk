@@ -110,6 +110,7 @@ public:
 
    // Load or save data from/to disk
    int SetDisk(const std::string & deviceFilename);
+   int SetDisk(const DiskIO & disk);
    DiskIO* GetDisk(void) {return &myDisk;}
    int LoadMBR(const std::string & f) {return protectiveMBR.ReadMBRData(f);}
    int WriteProtectiveMBR(void) {return protectiveMBR.WriteMBRData(&myDisk);}
